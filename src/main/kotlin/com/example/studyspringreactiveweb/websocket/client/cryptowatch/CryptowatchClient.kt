@@ -1,19 +1,16 @@
 package com.example.studyspringreactiveweb.websocket.client.cryptowatch
 
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean
+import org.springframework.web.reactive.HandlerMapping
+import org.springframework.web.reactive.handler.SimpleUrlHandlerMapping
 import org.springframework.web.reactive.socket.WebSocketHandler
 import org.springframework.web.reactive.socket.WebSocketMessage
 import org.springframework.web.reactive.socket.client.ReactorNettyWebSocketClient
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.time.Duration
-import org.springframework.web.reactive.handler.SimpleUrlHandlerMapping
-import java.util.HashMap
-import org.springframework.web.reactive.HandlerMapping
-
-
+import java.util.*
 
 
 class CryptowatchClient(@Qualifier("cryptowatchWebSocketHandler") val webSocketHandler: WebSocketHandler) {
